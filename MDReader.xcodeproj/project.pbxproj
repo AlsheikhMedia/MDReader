@@ -10,20 +10,25 @@
 		082DA7D8B6810F3ECF11EAD2 /* MDReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB386A9B5C2DF25171FDF7 /* MDReaderApp.swift */; };
 		33A39D1BA6094BCA69E59DD1 /* ThemePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103F95D27F9B81EF1A33C780 /* ThemePickerView.swift */; };
 		4044BBBB23702633A6F4840E /* MarkdownDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2A2E394C7BCC45CEBD064 /* MarkdownDocument.swift */; };
-		686960CF2C6A55EAC6A236D5 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = C5C7F6D56AD0E60FB6832E00 /* MarkdownUI */; };
+		686960CF2C6A55EAC6A236D5 /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = 29D5AEA61CE5D1ED43E20022 /* cmark-gfm */; };
 		6E9EC9DA7975245D3EA42D64 /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D8256BE0FB818B58637D0D /* DocumentViewModel.swift */; };
+		85C071439993D2CB69C25CC5 /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA755698CBCB1F665A28752 /* MarkdownRenderer.swift */; };
 		8BBF1D2F2411631A3FAFB905 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A0A2F286861321FBB6EACB /* DocumentView.swift */; };
 		E2AAB26F3E733DD2B9EF8BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8016BCA31AF3456D8C6E2DFD /* Assets.xcassets */; };
-		FBF5E04AC0163E3880165421 /* MarkdownTheme+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F30A64A472E2097A6388E4 /* MarkdownTheme+Custom.swift */; };
+		F2455A33934B05B3DBB2CBFE /* MarkdownWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC41C8E941946DB0C9C35C1C /* MarkdownWebView.swift */; };
+		F2476D209C87126EA0CB4E62 /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 67B45F4543DCFCD9CF2FCE01 /* markdown.css */; };
+		F49111C05834E7DFE0452613 /* cmark-gfm-extensions in Frameworks */ = {isa = PBXBuildFile; productRef = D792A63A06502FB8A58D9689 /* cmark-gfm-extensions */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AA755698CBCB1F665A28752 /* MarkdownRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift; sourceTree = "<group>"; };
 		103F95D27F9B81EF1A33C780 /* ThemePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePickerView.swift; sourceTree = "<group>"; };
 		53DED5154D56B7C28050E568 /* MDReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B45F4543DCFCD9CF2FCE01 /* markdown.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = markdown.css; sourceTree = "<group>"; };
 		8016BCA31AF3456D8C6E2DFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90A0A2F286861321FBB6EACB /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
-		C0F30A64A472E2097A6388E4 /* MarkdownTheme+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarkdownTheme+Custom.swift"; sourceTree = "<group>"; };
 		CAC2A2E394C7BCC45CEBD064 /* MarkdownDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownDocument.swift; sourceTree = "<group>"; };
+		CC41C8E941946DB0C9C35C1C /* MarkdownWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownWebView.swift; sourceTree = "<group>"; };
 		D2E0B10A23AE4496C09637D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E8D8256BE0FB818B58637D0D /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
 		EDEB386A9B5C2DF25171FDF7 /* MDReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDReaderApp.swift; sourceTree = "<group>"; };
@@ -34,7 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				686960CF2C6A55EAC6A236D5 /* MarkdownUI in Frameworks */,
+				686960CF2C6A55EAC6A236D5 /* cmark-gfm in Frameworks */,
+				F49111C05834E7DFE0452613 /* cmark-gfm-extensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				90A0A2F286861321FBB6EACB /* DocumentView.swift */,
+				CC41C8E941946DB0C9C35C1C /* MarkdownWebView.swift */,
 				103F95D27F9B81EF1A33C780 /* ThemePickerView.swift */,
 			);
 			path = Views;
@@ -89,7 +96,7 @@
 				442230176316647E3D0F5B12 /* App */,
 				778CE4D0590AE3EC0076505F /* Models */,
 				DCC8CD2A3A6832FAA2F6194F /* Resources */,
-				B88EC1CE30C50E3A8E9DB7B9 /* Theme */,
+				DCE1DE0E961E1BDC4E690B34 /* Utilities */,
 				A61BDD3549DFFCFF23EBAF2F /* ViewModels */,
 				8C325B4AA582D1F788D7F9C7 /* Views */,
 			);
@@ -104,20 +111,21 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		B88EC1CE30C50E3A8E9DB7B9 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				C0F30A64A472E2097A6388E4 /* MarkdownTheme+Custom.swift */,
-			);
-			path = Theme;
-			sourceTree = "<group>";
-		};
 		DCC8CD2A3A6832FAA2F6194F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				8016BCA31AF3456D8C6E2DFD /* Assets.xcassets */,
+				67B45F4543DCFCD9CF2FCE01 /* markdown.css */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DCE1DE0E961E1BDC4E690B34 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0AA755698CBCB1F665A28752 /* MarkdownRenderer.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +145,8 @@
 			);
 			name = MDReader;
 			packageProductDependencies = (
-				C5C7F6D56AD0E60FB6832E00 /* MarkdownUI */,
+				29D5AEA61CE5D1ED43E20022 /* cmark-gfm */,
+				D792A63A06502FB8A58D9689 /* cmark-gfm-extensions */,
 			);
 			productName = MDReader;
 			productReference = 53DED5154D56B7C28050E568 /* MDReader.app */;
@@ -163,7 +172,7 @@
 			mainGroup = 88ABB4D75C27212A5F8EBF95;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				163ECB3330316A7A27BE08B9 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				3235B6FA9CDE15EFA9E79555 /* XCRemoteSwiftPackageReference "swift-cmark" */,
 			);
 			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
@@ -180,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2AAB26F3E733DD2B9EF8BBA /* Assets.xcassets in Resources */,
+				F2476D209C87126EA0CB4E62 /* markdown.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +204,8 @@
 				6E9EC9DA7975245D3EA42D64 /* DocumentViewModel.swift in Sources */,
 				082DA7D8B6810F3ECF11EAD2 /* MDReaderApp.swift in Sources */,
 				4044BBBB23702633A6F4840E /* MarkdownDocument.swift in Sources */,
-				FBF5E04AC0163E3880165421 /* MarkdownTheme+Custom.swift in Sources */,
+				85C071439993D2CB69C25CC5 /* MarkdownRenderer.swift in Sources */,
+				F2455A33934B05B3DBB2CBFE /* MarkdownWebView.swift in Sources */,
 				33A39D1BA6094BCA69E59DD1 /* ThemePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,21 +400,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		163ECB3330316A7A27BE08B9 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+		3235B6FA9CDE15EFA9E79555 /* XCRemoteSwiftPackageReference "swift-cmark" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			repositoryURL = "https://github.com/swiftlang/swift-cmark";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 0.6.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C5C7F6D56AD0E60FB6832E00 /* MarkdownUI */ = {
+		29D5AEA61CE5D1ED43E20022 /* cmark-gfm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 163ECB3330316A7A27BE08B9 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
-			productName = MarkdownUI;
+			package = 3235B6FA9CDE15EFA9E79555 /* XCRemoteSwiftPackageReference "swift-cmark" */;
+			productName = "cmark-gfm";
+		};
+		D792A63A06502FB8A58D9689 /* cmark-gfm-extensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3235B6FA9CDE15EFA9E79555 /* XCRemoteSwiftPackageReference "swift-cmark" */;
+			productName = "cmark-gfm-extensions";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

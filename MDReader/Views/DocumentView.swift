@@ -1,19 +1,18 @@
 import SwiftUI
-import MarkdownUI
 
 struct DocumentView: View {
     let document: MarkdownDocument
     @StateObject private var viewModel = DocumentViewModel()
+    @State private var printTrigger = false
 
     var body: some View {
-        ScrollView {
-            Markdown(document.text)
-                .markdownTheme(viewModel.currentTheme)
-                .textSelection(.enabled)
-                .padding()
-                .environment(\.layoutDirection, document.text.isRTL ? .rightToLeft : .leftToRight)
-                .multilineTextAlignment(document.text.isRTL ? .trailing : .leading)
-        }
+        MarkdownWebView(
+            markdown: document.text,
+            fontSize: viewModel.fontSize,
+            appearanceMode: viewModel.appearanceMode,
+            isRTL: document.text.isRTL,
+            printTrigger: $printTrigger
+        )
         .frame(minWidth: 300, minHeight: 400)
         .toolbar {
             ToolbarItem(placement: .automatic) {
@@ -22,20 +21,8 @@ struct DocumentView: View {
         }
         .preferredColorScheme(viewModel.colorSchemeOverride)
         .keyboardShortcut(commands: viewModel)
-        #if os(macOS)
-        .keyboardShortcut("p", modifiers: .command) { printDocument() }
-        #endif
+        .keyboardShortcut("p", modifiers: .command) { printTrigger = true }
     }
-
-    #if os(macOS)
-    private func printDocument() {
-        let printView = NSTextView(frame: NSRect(x: 0, y: 0, width: 612, height: 792))
-        printView.string = document.text
-        printView.font = NSFont.systemFont(ofSize: viewModel.fontSize)
-        let printOperation = NSPrintOperation(view: printView)
-        printOperation.runModal(for: NSApp.keyWindow ?? NSWindow(), delegate: nil, didRun: nil, contextInfo: nil)
-    }
-    #endif
 }
 
 private extension String {

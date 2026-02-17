@@ -1,5 +1,4 @@
 import SwiftUI
-import MarkdownUI
 
 final class DocumentViewModel: ObservableObject {
     enum AppearanceMode: String, CaseIterable {
@@ -30,9 +29,5 @@ final class DocumentViewModel: ObservableObject {
         case .light: .light
         case .dark: .dark
         }
-    }
-
-    var currentTheme: MarkdownUI.Theme {
-        .custom(fontSize: fontSize)
     }
 }

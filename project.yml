@@ -7,9 +7,9 @@ options:
   generateEmptyDirectories: true
 
 packages:
-  MarkdownUI:
-    url: https://github.com/gonzalezreal/swift-markdown-ui
-    from: "2.4.0"
+  swift-cmark:
+    url: https://github.com/swiftlang/swift-cmark
+    from: "0.6.0"
 
 targets:
   MDReader:
@@ -32,7 +32,10 @@ targets:
         Release:
           SWIFT_OPTIMIZATION_LEVEL: -Owholemodule
     dependencies:
-      - package: MarkdownUI
+      - package: swift-cmark
+        product: cmark-gfm
+      - package: swift-cmark
+        product: cmark-gfm-extensions
     info:
       path: MDReader/Info.plist
       properties:
