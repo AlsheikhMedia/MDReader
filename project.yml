@@ -21,7 +21,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.hassanalsheikh.MDReader
         PRODUCT_NAME: MDReader
-        MARKETING_VERSION: "3.0.0"
+        MARKETING_VERSION: "3.1.0"
         CURRENT_PROJECT_VERSION: "1"
         SWIFT_VERSION: "5.9"
         INFOPLIST_KEY_CFBundleDisplayName: MDReader
