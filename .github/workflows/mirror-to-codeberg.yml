@@ -1,0 +1,24 @@
+name: Mirror to Codeberg
+
+on:
+  push:
+  delete:
+  workflow_dispatch:
+
+concurrency:
+  group: mirror-to-codeberg
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror GitHub -> Codeberg
+        env:
+          CODEBERG_USER: ${{ secrets.CODEBERG_USER }}
+          CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+        run: |
+          set -euo pipefail
+          git clone --mirror "https://github.com/${GITHUB_REPOSITORY}.git" repo.git
+          cd repo.git
+          git push --mirror "https://${CODEBERG_USER}:${CODEBERG_TOKEN}@codeberg.org/AlsheikhMedia/MDReader.git"
