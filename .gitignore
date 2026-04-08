@@ -34,3 +34,6 @@ homebrew-tap/
 .env
 .env.*
 !.env.example
+
+# Claude Code per-machine state
+.claude/settings.local.json
