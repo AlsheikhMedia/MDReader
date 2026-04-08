@@ -290,7 +290,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 3.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hassanalsheikh.MDReader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alsheikhmedia.MDReader;
 				PRODUCT_NAME = MDReader;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -368,7 +368,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 3.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hassanalsheikh.MDReader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alsheikhmedia.MDReader;
 				PRODUCT_NAME = MDReader;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
