@@ -29,3 +29,8 @@ xcuserdata/
 
 # Homebrew tap (separate repo)
 homebrew-tap/
+
+# Local secrets — never commit
+.env
+.env.*
+!.env.example
