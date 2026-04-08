@@ -37,3 +37,11 @@ homebrew-tap/
 
 # Claude Code per-machine state
 .claude/settings.local.json
+
+# Python (MDReader-linux)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+dist/
