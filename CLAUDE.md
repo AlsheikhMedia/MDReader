@@ -54,7 +54,8 @@ MDReader/
 
 ## Distribution
 
-- **GitHub repo**: https://github.com/HassanAlsheikh/MDReader
+- **GitHub repo (primary)**: https://github.com/AlsheikhMedia/MDReader
+- **Codeberg mirror (read-only)**: https://codeberg.org/AlsheikhMedia/MDReader — auto-synced from GitHub via `.github/workflows/mirror-to-codeberg.yml`
 - **Homebrew tap**: https://github.com/HassanAlsheikh/homebrew-tap (`brew tap HassanAlsheikh/tap && brew install --cask mdreader`)
 - **GitHub Releases**: DMG attached to releases
 - **Not notarized** — users need `xattr -cr /Applications/MDReader.app` or right-click > Open
