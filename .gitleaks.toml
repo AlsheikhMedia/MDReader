@@ -1,0 +1,16 @@
+title = "MDReader Gitleaks Config"
+
+# Inherit all gitleaks built-in rules (AWS, GCP, Azure, GitHub/GitLab PATs,
+# Stripe, Slack, generic high-entropy strings, RSA/EC keys, etc.). Without
+# this line, gitleaks auto-discovers this file and loads an EMPTY ruleset —
+# every scan silently passes. Established during the 2026-04-19 org sweep.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Known non-secret infrastructure identifiers"
+paths = [
+  '''internal/.*\.md''',
+  '''CLAUDE\.md''',
+  '''\.claude/.*''',
+]
